@@ -1,194 +1,373 @@
-* {
-  margin: unset;
-}
-body {
-  background-color: darkslategray;
-  display: flex;
-}
-
-@keyframes flicker {
-  0% {
-    opacity: 0.27861;
-  }
-  5% {
-    opacity: 0.34769;
-  }
-  10% {
-    opacity: 0.23604;
-  }
-  15% {
-    opacity: 0.90626;
-  }
-  20% {
-    opacity: 0.18128;
-  }
-  25% {
-    opacity: 0.83891;
-  }
-  30% {
-    opacity: 0.65583;
-  }
-  35% {
-    opacity: 0.67807;
-  }
-  40% {
-    opacity: 0.26559;
-  }
-  45% {
-    opacity: 0.84693;
-  }
-  50% {
-    opacity: 0.96019;
-  }
-  55% {
-    opacity: 0.08594;
-  }
-  60% {
-    opacity: 0.20313;
-  }
-  65% {
-    opacity: 0.71988;
-  }
-  70% {
-    opacity: 0.53455;
-  }
-  75% {
-    opacity: 0.37288;
-  }
-  80% {
-    opacity: 0.71428;
-  }
-  85% {
-    opacity: 0.70419;
-  }
-  90% {
-    opacity: 0.7003;
-  }
-  95% {
-    opacity: 0.36108;
-  }
-  100% {
-    opacity: 0.24387;
-  }
-}
-@keyframes textShadow {
-  0% {
-    text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  5% {
-    text-shadow: 2.7928974010788217px 0 1px rgba(0,30,255,0.5), -2.7928974010788217px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  10% {
-    text-shadow: 0.02956275843481219px 0 1px rgba(0,30,255,0.5), -0.02956275843481219px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  15% {
-    text-shadow: 0.40218538552878136px 0 1px rgba(0,30,255,0.5), -0.40218538552878136px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  20% {
-    text-shadow: 3.4794037899852017px 0 1px rgba(0,30,255,0.5), -3.4794037899852017px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  25% {
-    text-shadow: 1.6125630401149584px 0 1px rgba(0,30,255,0.5), -1.6125630401149584px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  30% {
-    text-shadow: 0.7015590085143956px 0 1px rgba(0,30,255,0.5), -0.7015590085143956px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  35% {
-    text-shadow: 3.896914047650351px 0 1px rgba(0,30,255,0.5), -3.896914047650351px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  40% {
-    text-shadow: 3.870905614848819px 0 1px rgba(0,30,255,0.5), -3.870905614848819px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  45% {
-    text-shadow: 2.231056963361899px 0 1px rgba(0,30,255,0.5), -2.231056963361899px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  50% {
-    text-shadow: 0.08084290417898504px 0 1px rgba(0,30,255,0.5), -0.08084290417898504px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  55% {
-    text-shadow: 2.3758461067427543px 0 1px rgba(0,30,255,0.5), -2.3758461067427543px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  60% {
-    text-shadow: 2.202193051050636px 0 1px rgba(0,30,255,0.5), -2.202193051050636px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  65% {
-    text-shadow: 2.8638780614874975px 0 1px rgba(0,30,255,0.5), -2.8638780614874975px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  70% {
-    text-shadow: 0.48874025155497314px 0 1px rgba(0,30,255,0.5), -0.48874025155497314px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  75% {
-    text-shadow: 1.8948491305757957px 0 1px rgba(0,30,255,0.5), -1.8948491305757957px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  80% {
-    text-shadow: 0.0833037308038857px 0 1px rgba(0,30,255,0.5), -0.0833037308038857px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  85% {
-    text-shadow: 0.09769827255241735px 0 1px rgba(0,30,255,0.5), -0.09769827255241735px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  90% {
-    text-shadow: 3.443339761481782px 0 1px rgba(0,30,255,0.5), -3.443339761481782px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  95% {
-    text-shadow: 2.1841838852799786px 0 1px rgba(0,30,255,0.5), -2.1841838852799786px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-  100% {
-    text-shadow: 2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;
-  }
-}
-.crt::after {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: rgba(18, 16, 16, 0.1);
-  opacity: 0;
-  z-index: 2;
-  pointer-events: none;
-  animation: flicker 0.15s infinite;
-}
-.crt::before {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-  z-index: 2;
-  background-size: 100% 2px, 3px 100%;
-  pointer-events: none;
-}
-.crt {
-  animation: textShadow 1.6s infinite;
-}
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans&family=Caveat&family=League+Gothic&family=Rubik+Wet+Paint&display=swap');
 
 
 
+/* RESET */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
 
-.wrapper {
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   margin: 0;
   padding: 0;
-  position: relative;
-  top: 0;
-  left: 0;
+  font-weight: normal;
 }
-#front {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
+
+ol, ul {
+  list-style: none;
 }
-#back {
-  position: absolute;
-  top: 0;
-  left: 0px;
+
+h1 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 2rem;
+}
+section:first-child {
   width: 100%;
+}
+section {
+  width: 70%;
+}
+img {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+
+
+.line {
+  height: 3px;
+  width: 70%;
+  background-color: white;
+  margin: 100px 0 100px 0;
+}
+
+.button {
+  margin-top: 10px;
+  background-color: #120A21;
+  opacity: 0.5;
+  border-radius: 20px;
+  padding: 5px 10px;
+  transition: all .5s;
+}
+.button:hover {
+  opacity: 1;
+  padding: 6px 13px;
+}
+/* setting up the layout */
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(130vh, auto) 10vh;
+    grid-template-areas:
+        'main'
+        'footer';
+}
+
+.header {
+  grid-area: header;
+
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  background-color: #010003;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #010003;
+}
+
+/* nav */
+nav {
+  font-family: 'Rubik Wet Paint';
+  font-size: 1.5rem;
+  color: #92FC78;
+}
+
+
+.nav-custom {
+  padding: unset;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 100%;
+  grid-template-areas:
+    'nav-left logo nav-right';
+  align-items: start;
+}
+
+.nav-left {
+  grid-area: nav-left;
+  justify-self: end;
+}
+
+.nav-right {
+  grid-area: nav-right;
+}
+
+.navbar-brand {
+  grid-area: logo;
+  width: 100%;
+  height: 100%;
+}
+.navbar-brand img {
+  width: 100%;
+  height: 100%;
   height: auto;
 }
 
+
+/* start section */
+#start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(background2.jpg );
+  background-size: cover;  
+  background-position: center;
+}
+
+#img-logo {
+  max-width: 35%;
+  max-height: 35%;
+}
+
+
+
+/* intro section */
+
+#intro {
+  margin-top: 100px;
+}
+.rubik {
+  font-family: 'Rubik Wet Paint';
+  color:#92FC78;
+}
+.gothic {
+  font-family: 'League Gothic';
+}
+
+
+.intro-logo {
+  color:#92FC78;
+}
+
+.intro-text {
+  font-family: 'Alumni Sans';
+  margin-top: 50px;
+  font-size: 2rem;
+}
+
+/* work */
+
+.project {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    'polaroid text';
+}
+
+.work-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.polaroid {
+  grid-area: polaroid;
+  width: 90%;
+  padding: 3%;
+  background-color: white;
+  color: #120A21;
+  margin-bottom: 10px;
+}
+
+.polaroid img {
+  width: 100%;
+  height: 70%;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+
+figcaption {
+  font-size: 2.5rem;
+  font-family: 'Caveat';
+  text-align: center;
+}
+
+.work-text, .polaroid {
+  min-width: 400px;
+}
+.work-text h3 {
+  font-size: 2.7rem;
+  font-family: 'Caveat';
+  color: white;
+  margin-bottom: 20px;
+    animation: spooky-animation 2s infinite;
+}
+
+.work-text p {
+  font-family: 'Alumni Sans';
+  font-weight: 200;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.heartbeat {
+	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+	        animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-7-10 21:25:31
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation heartbeat
+ * ----------------------------------------
+ */
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.93);
+            transform: scale(0.93);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+.polaroid:hover {
+	-webkit-animation: rotate-scale-down 1s linear 0.03 reverse both;
+	        animation: rotate-scale-down 1s linear 0.03 reverse both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-7-10 22:1:5
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation rotate-scale-down
+ * ----------------------------------------
+ */
+@-webkit-keyframes rotate-scale-down {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+            transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotateZ(180deg);
+            transform: scale(0.5) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(0.8) rotateZ(360deg);
+            transform: scale(0.8) rotateZ(360deg);
+  }
+}
+@keyframes rotate-scale-down {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+            transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotateZ(180deg);
+            transform: scale(0.5) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(0.8) rotateZ(360deg);
+            transform: scale(0.8) rotateZ(360deg);
+  }
+}
+
+@keyframes spooky-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
