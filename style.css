@@ -229,6 +229,13 @@ figcaption {
     'polaroid' 
     'text';
   }
+.polaroid {
+	grid-area: polaroid;
+}
+	.work-text {
+		grid-area: text;
+	}
+	
 }
 .work-text p {
   font-family: 'Alumni Sans';
