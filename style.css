@@ -63,6 +63,9 @@ a {
 }
 /* setting up the layout */
 .wrapper {
+
+    width:100%;
+	  height: 100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: minmax(130vh, auto) 10vh;
@@ -221,6 +224,9 @@ figcaption {
 }
 
 @media (max-width: 1000px) {
+section {
+	width: 90%
+}
 .project {
   display: grid;
   grid-template-columns: 1fr;
@@ -229,6 +235,9 @@ figcaption {
     'polaroid' 
     'text';
   }
+	.work-text, .polaroid {
+  min-width: unset;
+}
 .polaroid {
 	grid-area: polaroid;
 }
