@@ -220,6 +220,16 @@ figcaption {
     animation: spooky-animation 2s infinite;
 }
 
+@media (max-width: 1000px) {
+.project {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'polaroid' 
+    'text';
+  }
+}
 .work-text p {
   font-family: 'Alumni Sans';
   font-weight: 200;
