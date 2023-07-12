@@ -61,7 +61,8 @@ a {
   width: 100%;
 }
 
-.offcanvas-button, .offcanvas-button a{
+.offcanvas-button,
+.offcanvas-button a {
   font-size: 5rem;
   margin-left: 15px;
   font-family: 'Rubik Wet Paint';
@@ -196,7 +197,89 @@ nav {
   margin-top: 50px;
   font-size: 2rem;
 }
+/* skills */
+.skills-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+}
 
+.skills-content {
+  display: grid;
+  row-gap: 4rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas:
+    'design if'
+    'coding if'
+    'animation if'
+    'graphic if'
+    'text text';
+}
+.rosa {
+  color: #e50674;
+}
+.verde {
+  color: #92fc78;
+}
+.skills-skills {
+  justify-content: start;
+  display: grid;
+  grid-template-columns: 114px auto;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    'img title'
+    'img text';
+}
+.skills-skills p {
+  margin-left: 5px;
+  font-family: 'Alumni Sans';
+  font-size: 2rem;
+  grid-area: text;
+}
+
+.skills-skills h3 {
+  margin-left: 5px;
+  font-family: 'League Gothic';
+  grid-area: title;
+}
+
+.skills-skills img {
+  grid-area: img;
+}
+#design {
+  grid-area: design;
+}
+
+#coding {
+  grid-area: coding;
+}
+
+#animation {
+  grid-area: animation;
+}
+
+#graphic {
+  grid-area: graphic;
+}
+
+#logo-if {
+  grid-area: if;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#logo-if img {
+  max-width: 40%;
+  animation: spooky-animation 2s infinite;
+}
+
+#skills-text {
+  grid-area: text;
+  font-family: 'Alumni Sans';
+  font-size: 2rem;
+  grid-area: text;
+}
 /* work */
 
 .project {
@@ -288,19 +371,47 @@ figcaption {
 }
 
 @media (max-width: 800px) {
-  .offcanvas-title {
-  font-family: 'Rubik Wet Paint';
-  font-size: 6rem;
-  width: 100%;
-}
+  .skills-content {
+    display: grid;
+    row-gap: 4rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      'if'
+      'design'
+      'coding'
+      'animation'
+      'graphic'
+      'text';
+  }
+  .skills-skills {
+    justify-content: start;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      'img'
+      'title'
+      'text';
+  }
+  .skills-skills img {
+    justify-self: center;
+  }
 
-.offcanvas-button, .offcanvas-button a{
-  font-size: 4rem;
-  margin-left: 15px;
-  font-family: 'Rubik Wet Paint';
-  text-decoration: none;
-  color: #120a21;
-}
+  .offcanvas-title {
+    font-family: 'Rubik Wet Paint';
+    font-size: 6rem;
+    width: 100%;
+  }
+
+  .offcanvas-button,
+  .offcanvas-button a {
+    font-size: 4rem;
+    margin-left: 15px;
+    font-family: 'Rubik Wet Paint';
+    text-decoration: none;
+    color: #120a21;
+  }
   .nav-custom {
     display: grid;
     grid-template-columns: 1fr;
@@ -343,18 +454,19 @@ figcaption {
 
 @media (max-width: 600px) {
   .offcanvas-title {
-  font-family: 'Rubik Wet Paint';
-  font-size: 3rem;
-  width: 100%;
-}
+    font-family: 'Rubik Wet Paint';
+    font-size: 3rem;
+    width: 100%;
+  }
 
-.offcanvas-button, .offcanvas-button a{
-  font-size: 2rem;
-  margin-left: 15px;
-  font-family: 'Rubik Wet Paint';
-  text-decoration: none;
-  color: #120a21;
-}
+  .offcanvas-button,
+  .offcanvas-button a {
+    font-size: 2rem;
+    margin-left: 15px;
+    font-family: 'Rubik Wet Paint';
+    text-decoration: none;
+    color: #120a21;
+  }
 }
 .heartbeat {
   -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
