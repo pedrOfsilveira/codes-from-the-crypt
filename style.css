@@ -1,24 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans&family=Caveat&family=League+Gothic&family=Rubik+Wet+Paint&display=swap');
 
-
-
 /* RESET */
 html {
   box-sizing: border-box;
   font-size: 16px;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -36,12 +46,28 @@ section {
 }
 img {
   display: block;
+  -webkit-user-drag: none;
 }
 a {
   text-decoration: none;
+  -webkit-user-drag: none;
+}
+.offcanvas-top {
+  opacity: 0.8;
+}
+.offcanvas-title {
+  font-family: 'Rubik Wet Paint';
+  font-size: 7rem;
+  width: 100%;
 }
 
-
+.offcanvas-button, .offcanvas-button a{
+  font-size: 5rem;
+  margin-left: 15px;
+  font-family: 'Rubik Wet Paint';
+  text-decoration: none;
+  color: #120a21;
+}
 .line {
   height: 3px;
   width: 70%;
@@ -51,11 +77,11 @@ a {
 
 .button {
   margin-top: 10px;
-  background-color: #120A21;
+  background-color: #120a21;
   opacity: 0.5;
   border-radius: 20px;
   padding: 5px 10px;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 .button:hover {
   opacity: 1;
@@ -63,40 +89,37 @@ a {
 }
 /* setting up the layout */
 .wrapper {
-
-    width:100%;
-	  height: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(130vh, auto) 10vh;
-    grid-template-areas:
-        'main'
-        'footer';
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(130vh, auto) 10vh;
+  grid-template-areas:
+    'main'
+    'footer';
 }
 
 .header {
   grid-area: header;
-
 }
 
 .main {
   grid-area: main;
   display: grid;
-  background-color: #010003;
+  background-color: #2b0155;
 }
 
 .footer {
   grid-area: footer;
-  background-color: #010003;
+  background-color: #2b0155;
 }
 
 /* nav */
 nav {
   font-family: 'Rubik Wet Paint';
   font-size: 1.5rem;
-  color: #92FC78;
+  color: #92fc78;
 }
-
 
 .nav-custom {
   padding: unset;
@@ -104,8 +127,7 @@ nav {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   grid-template-rows: 100%;
-  grid-template-areas:
-    'nav-left logo nav-right';
+  grid-template-areas: 'nav-left logo nav-right';
   align-items: start;
 }
 
@@ -118,17 +140,22 @@ nav {
   grid-area: nav-right;
 }
 
-.navbar-brand {
+.main-menu {
   grid-area: logo;
+}
+.navbar-brand {
   width: 100%;
   height: 100%;
+  border: none;
+  background: none;
+  padding: unset;
 }
 .navbar-brand img {
+  opacity: 0.6;
   width: 100%;
   height: 100%;
   height: auto;
 }
-
 
 /* start section */
 #start {
@@ -136,8 +163,9 @@ nav {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url(background2.jpg );
-  background-size: cover;  
+  min-height: 1000px;
+  background-image: url(background2.jpg);
+  background-size: cover;
   background-position: center;
 }
 
@@ -146,8 +174,6 @@ nav {
   max-height: 35%;
 }
 
-
-
 /* intro section */
 
 #intro {
@@ -155,15 +181,14 @@ nav {
 }
 .rubik {
   font-family: 'Rubik Wet Paint';
-  color:#92FC78;
+  color: #92fc78;
 }
 .gothic {
   font-family: 'League Gothic';
 }
 
-
 .intro-logo {
-  color:#92FC78;
+  color: #92fc78;
 }
 
 .intro-text {
@@ -179,8 +204,7 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas:
-    'polaroid text';
+  grid-template-areas: 'polaroid text';
 }
 
 .work-title {
@@ -194,7 +218,7 @@ nav {
   width: 90%;
   padding: 3%;
   background-color: white;
-  color: #120A21;
+  color: #2b0155;
   margin-bottom: 10px;
 }
 
@@ -205,14 +229,14 @@ nav {
   object-fit: cover;
 }
 
-
 figcaption {
   font-size: 2.5rem;
   font-family: 'Caveat';
   text-align: center;
 }
 
-.work-text, .polaroid {
+.work-text,
+.polaroid {
   min-width: 100px;
 }
 .work-text h3 {
@@ -220,42 +244,121 @@ figcaption {
   font-family: 'Caveat';
   color: white;
   margin-bottom: 20px;
-    animation: spooky-animation 2s infinite;
+  animation: spooky-animation 2s infinite;
 }
 
-@media (max-width: 1000px) {
-section {
-	width: 90%
-}
-.project {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-    'polaroid' 
-    'text';
-  }
-	.work-text, .polaroid {
-  min-width: unset;
-}
-.polaroid {
-	grid-area: polaroid;
-}
-	.work-text {
-		grid-area: text;
-	}
-	
-}
 .work-text p {
   font-family: 'Alumni Sans';
   font-weight: 200;
   font-size: 1.8rem;
   color: white;
 }
+.offcanvas-top {
+  --bs-offcanvas-bg: #92fc78;
+  --bs-offcanvas-height: 100vh;
+}
 
+@media (max-width: 1300px) {
+  section {
+    width: 90%;
+  }
+  .line {
+    width: 90%;
+  }
+  .project {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+      'polaroid'
+      'text';
+  }
+  .work-text,
+  .polaroid {
+    min-width: unset;
+    width: 100%;
+  }
+  .polaroid {
+    grid-area: polaroid;
+  }
+  .work-text {
+    grid-area: text;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .offcanvas-title {
+  font-family: 'Rubik Wet Paint';
+  font-size: 6rem;
+  width: 100%;
+}
+
+.offcanvas-button, .offcanvas-button a{
+  font-size: 4rem;
+  margin-left: 15px;
+  font-family: 'Rubik Wet Paint';
+  text-decoration: none;
+  color: #120a21;
+}
+  .nav-custom {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100%;
+    grid-template-areas: 'logo';
+    align-items: start;
+  }
+  .navbar-brand {
+    width: 60%;
+    height: 100%;
+    border: none;
+    background: none;
+    padding: unset;
+  }
+
+  .button {
+    display: none;
+  }
+
+  .main-menu {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+  }
+
+  #intro {
+    margin-top: unset;
+  }
+  #img-logo {
+    max-width: 80%;
+    max-height: 80%;
+  }
+  #start {
+    background-image: none;
+    background-color: #2b0155;
+    height: 50vh;
+    min-height: unset;
+  }
+}
+
+@media (max-width: 600px) {
+  .offcanvas-title {
+  font-family: 'Rubik Wet Paint';
+  font-size: 3rem;
+  width: 100%;
+}
+
+.offcanvas-button, .offcanvas-button a{
+  font-size: 2rem;
+  margin-left: 15px;
+  font-family: 'Rubik Wet Paint';
+  text-decoration: none;
+  color: #120a21;
+}
+}
 .heartbeat {
-	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
-	        animation: heartbeat 1.5s ease-in-out infinite both;
+  -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+  animation: heartbeat 1.5s ease-in-out infinite both;
 }
 
 /* ----------------------------------------------
@@ -273,75 +376,75 @@ section {
 @-webkit-keyframes heartbeat {
   from {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-transform-origin: center center;
-            transform-origin: center center;
+    transform-origin: center center;
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   10% {
     -webkit-transform: scale(0.91);
-            transform: scale(0.91);
+    transform: scale(0.91);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   17% {
     -webkit-transform: scale(0.98);
-            transform: scale(0.98);
+    transform: scale(0.98);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   33% {
     -webkit-transform: scale(0.87);
-            transform: scale(0.87);
+    transform: scale(0.87);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   45% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
 }
 @keyframes heartbeat {
   from {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-transform-origin: center center;
-            transform-origin: center center;
+    transform-origin: center center;
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   10% {
     -webkit-transform: scale(0.95);
-            transform: scale(0.95);
+    transform: scale(0.95);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   17% {
     -webkit-transform: scale(0.98);
-            transform: scale(0.98);
+    transform: scale(0.98);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   33% {
     -webkit-transform: scale(0.93);
-            transform: scale(0.93);
+    transform: scale(0.93);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   45% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
 }
 
 .polaroid:hover {
-	-webkit-animation: rotate-scale-down 1s linear 0.03 reverse both;
-	        animation: rotate-scale-down 1s linear 0.03 reverse both;
+  -webkit-animation: rotate-scale-down 1s linear 0.03 reverse both;
+  animation: rotate-scale-down 1s linear 0.03 reverse both;
 }
 
 /* ----------------------------------------------
@@ -359,29 +462,29 @@ section {
 @-webkit-keyframes rotate-scale-down {
   0% {
     -webkit-transform: scale(1) rotateZ(0);
-            transform: scale(1) rotateZ(0);
+    transform: scale(1) rotateZ(0);
   }
   50% {
     -webkit-transform: scale(0.5) rotateZ(180deg);
-            transform: scale(0.5) rotateZ(180deg);
+    transform: scale(0.5) rotateZ(180deg);
   }
   100% {
     -webkit-transform: scale(0.8) rotateZ(360deg);
-            transform: scale(0.8) rotateZ(360deg);
+    transform: scale(0.8) rotateZ(360deg);
   }
 }
 @keyframes rotate-scale-down {
   0% {
     -webkit-transform: scale(1) rotateZ(0);
-            transform: scale(1) rotateZ(0);
+    transform: scale(1) rotateZ(0);
   }
   50% {
     -webkit-transform: scale(0.5) rotateZ(180deg);
-            transform: scale(0.5) rotateZ(180deg);
+    transform: scale(0.5) rotateZ(180deg);
   }
   100% {
     -webkit-transform: scale(0.8) rotateZ(360deg);
-            transform: scale(0.8) rotateZ(360deg);
+    transform: scale(0.8) rotateZ(360deg);
   }
 }
 
