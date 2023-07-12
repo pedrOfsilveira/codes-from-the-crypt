@@ -28,7 +28,7 @@
             <a class="nav-link nav-button" href="#skills-line">skills</a>
           </div>
           <div class="button">
-            <a class="nav-link nav-button" href="#contact">summon me</a>
+            <button class="nav-link nav-button" data-bs-toggle="modal" data-bs-target="#contactModal">summon me</button>
           </div>
         </div>
         <div class="main-menu">
@@ -102,9 +102,11 @@
             <img src="img/logo-if.png">
           </div>
           <div id="skills-text" class="text-white">
-            <p>As a tormented disciple and passionate devotee of the web development craft, I embrace the darkness that shrouds my
-            limited experience, forever yearning to delve deeper into the abyss, honing my skills in pursuit of the unholy art that
-            consumes my soul.</p>
+            <p>As a tormented disciple and passionate devotee of the web development craft, I embrace the darkness that
+              shrouds my
+              limited experience, forever yearning to delve deeper into the abyss, honing my skills in pursuit of the
+              unholy art that
+              consumes my soul.</p>
           </div>
         </div>
       </section>
@@ -166,7 +168,9 @@
       </section>
       <section id="contact"></section>
     </main>
+
     <footer class="footer"></footer>
+
     <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
       <div class="offcanvas-header">
         <h1 class="offcanvas-title" id="offcanvasTopLabel">SECTIONS</h1>
@@ -174,7 +178,7 @@
       </div>
       <div class="offcanvas-body">
         <div class="offcanvas-button">
-          <a class="-button" href="#">home</a>
+          <a class="nav-button" href="#">home</a>
         </div>
         <div class="offcanvas-button">
           <a class="nav-button" href="#skills-line">skills</a>
@@ -183,15 +187,34 @@
           <a class="nav-button" href="#work-line">work</a>
         </div>
         <div class="offcanvas-button">
-          <a class="nav-button" href="#contact">summon me</a>
+          <a class="nav-button" data-bs-toggle="modal" data-bs-target="#contactModal"  >summon me</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="inside-grave">
+              <h1 class="modal-title gothic text-white" id="contactModalLabel">SUMMON ME</h1>
+              <p class="gothic text-white">Desires whispered to the <button class="btn bird"
+                  data-bs-toggle="popover" data-bs-placement="top" data-bs-custom-class="custom-popover" title="Twitter"
+                  data-bs-content="@pedrofsilveira">bird</button>, or within <button class="btn mail" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-custom-class="custom-popover" title="E-MAIL" data-bs-content="pedrofsilveira24@gmail.com">Eldritch Mail's</button> depths, summon my rise. A tribute for your
+                darkest longings.</p>
+              <img src="img/cross.png">
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
   </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
 
 </body>
 
