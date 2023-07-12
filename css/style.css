@@ -164,7 +164,7 @@ nav {
   align-items: center;
   height: 100vh;
   min-height: 1000px;
-  background-image: url(background2.jpg);
+  background-image: url(../img/background2.jpg);
   background-size: cover;
   background-position: center;
 }
