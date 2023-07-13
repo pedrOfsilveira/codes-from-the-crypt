@@ -57,13 +57,13 @@ a {
 }
 .offcanvas-title {
   font-family: 'Rubik Wet Paint';
-  font-size: 7rem;
+  font-size: 7rem;  
   width: 100%;
 }
 
 .offcanvas-button,
 .offcanvas-button a {
-  font-size: 5rem;
+  font-size: 4rem;
   margin-left: 15px;
   font-family: 'Rubik Wet Paint';
   text-decoration: none;
@@ -246,6 +246,7 @@ nav {
 
 .skills-skills img {
   grid-area: img;
+  justify-self: center;
 }
 #design {
   grid-area: design;
@@ -643,9 +644,11 @@ figcaption {
   }
 }
 
-.polaroid:hover {
-  -webkit-animation: rotate-scale-down 1s linear 0.03 reverse both;
-  animation: rotate-scale-down 1s linear 0.03 reverse both;
+.project a:hover {
+  .polaroid {
+    -webkit-animation: rotate-scale-down 1s linear 0.03 reverse both;
+    animation: rotate-scale-down 1s linear 0.03 reverse both;
+  }
 }
 
 /* ----------------------------------------------
