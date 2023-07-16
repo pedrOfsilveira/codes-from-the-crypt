@@ -12,6 +12,9 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  background-color: #2b0155;
+}
 body,
 h1,
 h2,
@@ -57,7 +60,7 @@ a {
 }
 .offcanvas-title {
   font-family: 'Rubik Wet Paint';
-  font-size: 7rem;  
+  font-size: 7rem;
   width: 100%;
 }
 
@@ -94,7 +97,7 @@ a {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: minmax(130vh, auto) 10vh;
+  grid-template-rows: minmax(130vh, auto) auto;
   grid-template-areas:
     'main'
     'footer';
@@ -110,11 +113,37 @@ a {
   background-color: #2b0155;
 }
 
-.footer {
+footer {
   grid-area: footer;
-  background-color: #2b0155;
 }
 
+footer {
+  color: white;
+}
+
+.nav-link {
+  --bs-secondary-color: white;
+}
+
+.text-body-secondary {
+  --bs-secondary-color: white;
+}
+
+.border-bottom {
+  --bs-border-width: 3px;
+}
+footer .nav-link {
+  font-family: 'Alumni Sans';
+  font-size: 1.5rem;
+}
+footer h5 {
+  font-size: 1.5rem;
+}
+footer p {
+  font-family: "Alumni Sans";
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
 /* nav */
 nav {
   font-family: 'Rubik Wet Paint';
@@ -162,17 +191,22 @@ nav {
 #start {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   height: 100vh;
   min-height: 1000px;
   background-image: url(../img/background2.jpg);
   background-size: cover;
   background-position: center;
 }
-
+#centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 #img-logo {
-  max-width: 35%;
-  max-height: 35%;
+  max-width: 80%;
+  max-height: 80%;
 }
 
 /* intro section */
@@ -283,27 +317,43 @@ nav {
 }
 /* work */
 
-.project {
-  margin-top: 100px;
+.project-grid {
   display: grid;
+  gap: 2rem;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: 'polaroid text';
+  grid-template-areas:
+    'first second'
+    'third fourth';
 }
 
-.work-title {
+#wikiposa {
+  grid-area: first;
+}
+#lipsum {
+  grid-area: second;
+}
+#lipsum2 {
+  grid-area: third;
+}
+#lipsum3 {
+  grid-area: fourth;
+}
+
+.project {
+  width: 100%;
+}
+
+.work-title,
+.about-title {
   width: 100%;
   text-align: center;
   margin-bottom: 80px;
 }
 
 .polaroid {
-  grid-area: polaroid;
-  width: 90%;
   padding: 3%;
   background-color: white;
   color: #2b0155;
-  margin-bottom: 10px;
 }
 
 .polaroid img {
@@ -319,24 +369,79 @@ figcaption {
   text-align: center;
 }
 
-.work-text,
 .polaroid {
   min-width: 100px;
 }
-.work-text h3 {
-  font-size: 2.7rem;
-  font-family: 'Caveat';
-  color: white;
-  margin-bottom: 20px;
-  animation: spooky-animation 2s infinite;
+
+/* ABOUT SECTION COMEÇA AQUI */
+.about-content {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: 'grave text';
+}
+.about-grave {
+  grid-area: grave;
+  width: auto;
+  min-width: 350px;
+  border-radius: 140px 140px 10px 10px;
+  border-left: 20px solid #b31383;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  background: #5e457c;
+  display: flex;
+  align-items: flex-end;
 }
 
-.work-text p {
+#about-inside {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+  justify-items: center;
+  grid-template-areas:
+    'cross'
+    'me'
+    'text';
+}
+#about-inside * {
+  padding: 5px;
+}
+
+#cross {
+  grid-area: cross;
+  margin-top: 20px;
+  width: 20%;
+}
+#me {
+  grid-area: me;
+  display: flex;
+  justify-content: center;
+}
+#me img {
+  width: 80%;
+  min-width: 220px;
+  max-height: 220px;
+}
+#grave-engrave {
+  grid-area: text;
+  padding-bottom: 30px;
+  width: 60%;
+}
+.about-content h2 {
+  grid-area: title;
   font-family: 'Alumni Sans';
-  font-weight: 200;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: white;
 }
+.about-text {
+  align-self: center;
+  padding: 10px;
+  grid-area: text;
+  font-family: 'Alumni Sans';
+  font-size: 2rem;
+  color: white;
+}
+
 .offcanvas-top {
   --bs-offcanvas-bg: #92fc78;
   --bs-offcanvas-height: 100vh;
@@ -381,15 +486,16 @@ figcaption {
 }
 
 .inside-grave h1 {
+  font-family: 'League Gothic';
   grid-area: title;
   text-align: center;
   margin-top: 25px;
 }
 .inside-grave p {
+  font-family: 'League Gothic';
   grid-area: text;
   width: 90%;
   justify-self: center;
-  padding-bottom: 10px;
 }
 .inside-grave img {
   grid-area: cross;
@@ -438,29 +544,37 @@ figcaption {
   .line {
     width: 90%;
   }
-  .project {
-    display: grid;
+}
+@media (max-width: 1000px) {
+  .project-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;
     grid-template-areas:
-      'polaroid'
-      'text';
+      'first'
+      'second'
+      'third'
+      'fourth';
   }
-  .work-text,
   .polaroid {
     min-width: unset;
     width: 100%;
   }
-  .polaroid {
-    grid-area: polaroid;
-  }
-  .work-text {
-    grid-area: text;
-    margin-top: 1rem;
+  figcaption p {
+    font-size: 3.5rem;
   }
 }
-
 @media (max-width: 800px) {
+  .about-content {
+    justify-items: center;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'grave'
+      'text';
+  }
+  .about-grave {
+    width: 60%;
+  }
   .skills-content {
     display: grid;
     row-gap: 4rem;
@@ -520,6 +634,9 @@ figcaption {
   .button {
     display: none;
   }
+  form .button {
+    display: block;
+  }
 
   .main-menu {
     grid-area: logo;
@@ -540,9 +657,21 @@ figcaption {
     height: 50vh;
     min-height: unset;
   }
+  #centering {
+    height: 50vh;
+  }
 }
 
 @media (max-width: 600px) {
+  figcaption p {
+    font-size: 2rem;
+  }
+  .modal-content h1,
+  .modal-content p,
+  .bird,
+  .mail {
+    font-size: 2rem;
+  }
   .offcanvas-title {
     font-family: 'Rubik Wet Paint';
     font-size: 3rem;
