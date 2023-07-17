@@ -41,7 +41,7 @@ h1 {
 h3 {
   font-size: 2rem;
 }
-section:first-child {
+#start {
   width: 100%;
 }
 section {
@@ -172,6 +172,8 @@ nav {
 
 .main-menu {
   grid-area: logo;
+  width: 70%;
+  justify-self: center;
 }
 .navbar-brand {
   width: 100%;
