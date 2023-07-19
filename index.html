@@ -8,7 +8,7 @@
 
 
   <link rel="preload" href="css/style.css" as="style">
-  <link rel="preload" as="image" href="img/background2.jpg">  
+  <link rel="preload" as="image" href="img/background2.jpg">
   <link rel="preload" as="image" href="img/candle.png">
   <link rel="preload" as="image" href="img/cross.png">
   <link rel="preload" as="image" href="img/gato.jpg">
@@ -35,10 +35,13 @@
       <nav id="header-nav" class="navbar w-100 nav-custom">
         <div class="nav-left d-flex justify-content-evenly w-100">
           <div class="button">
-            <a class="nav-link nav-button" href="#work-line">work</a>
+            <a class="nav-link nav-button" href="#">home</a>
           </div>
           <div class="button">
-            <a class="nav-link nav-button" href="#">home</a>
+            <a class="nav-link nav-button" href="#about-line">about</a>
+          </div>
+          <div class="button">
+            <a class="nav-link nav-button" href="#work-line">work</a>
           </div>
         </div>
         <div class="nav-right d-flex justify-content-evenly w-100">
@@ -136,10 +139,11 @@
       <section id="work">
         <div class="work-title">
           <h1 class="rubik">DIARY</h1>
+          <h3 class="gothic text-white">CLICK THE POLAROIDS. BECOME AWARE.</h3>
         </div>
         <div class="project-grid">
           <div id="wikiposa" class="project">
-            <a href="http://wikiposa.com">
+            <a data-bs-toggle="offcanvas" href="#wikiposa-page" role="button" aria-controls="wikiposa-page">
               <div class="polaroid">
                 <figure>
                   <img src="img/wikiposa-dark.png" alt="logo of my project Wikiposa">
@@ -154,29 +158,9 @@
           <div id="lipsum" class="project">
             <div class="polaroid">
               <figure>
-                <img src="img/gato.jpg" alt="lorem ipsum">
+                <img src="img/tecnomaker.png" alt="yet to come.">
                 <figcaption>
-                  <p>Lorem ipsum dolor sit amet,</p>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-          <div id="lipsum2" class="project">
-            <div class="polaroid">
-              <figure>
-                <img src="img/gato.jpg" alt="lorem ipsum">
-                <figcaption>
-                  <p>Lorem ipsum dolor sit amet,</p>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-          <div id="lipsum3" class="project">
-            <div class="polaroid">
-              <figure>
-                <img src="img/gato.jpg" alt="lorem ipsum">
-                <figcaption>
-                  <p>Lorem ipsum dolor sit amet,</p>
+                  <p>Yet to come.</p>
                 </figcaption>
               </figure>
             </div>
@@ -204,34 +188,13 @@
           </div>
           <div class="about-text">
             <h2>Pedro F. Silveira,</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus quis est a blandit. Sed semper
-              bibendum
-              metus, a convallis metus tincidunt nec. Donec cursus, enim eget placerat dapibus, neque velit suscipit
-              sapien, et
-              porttitor lectus elit at velit. </p>
-              
+            <p>Since 2022, I've delved into web development, now exploring front-end wonders. Enthusiastic about design, books, horror
+            movies, animation, my girlfriend, and coding. Crafting hauntingly beautiful digital experiences that enchant and
+            bewitch, merging creativity and technology into a mesmerizing tapestry. </p>
+            <div class="contact-icons"></div>
           </div>
         </div>
-        <div id="carouselExampleAutoplaying" class="carousel slide p-5" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="img/wikiposa-dark.png" class="d-block w-100" alt="logo of my project Wikiposa">
-            </div>
-            <div class="carousel-item">
-              <img src="img/gato.jpg" class="d-block w-100" alt="lorem ipsum">
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
+
       </section>
     </main>
 
@@ -242,10 +205,11 @@
           <li class="nav-item"><a href="#skills-line" class="nav-link px-2 text-body-secondary">Skills</a></li>
           <li class="nav-item"><a href="#work-line" class="nav-link px-2 text-body-secondary">Work</a></li>
           <li class="nav-item"><a href="#about-line" class="nav-link px-2 text-body-secondary">About</a></li>
-          <li class="nav-item"><a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" class="nav-link px-2 text-body-secondary">Summon Me</a></li>
+          <li class="nav-item"><a href="#" data-bs-toggle="modal" data-bs-target="#contactModal"
+              class="nav-link px-2 text-body-secondary">Summon Me</a></li>
         </ul>
         <p class="text-center text-body-secondary">&copy; 2023 Pedro Ferreira da Silveira.</p>
-        <form >
+        <form>
           <fieldset>
             <legend>
               <h5 class="gothic text-white">SUBSCRIBE TO MY NEWSLETTER</h5>
@@ -257,52 +221,110 @@
             </div>
           </fieldset>
         </form>
-        
+
       </footer>
     </div>
 
-    
 
-  <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-    <div class="offcanvas-header">
-      <h1 class="offcanvas-title" id="offcanvasTopLabel">SECTIONS</h1>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <div class="offcanvas-button">
-        <a class="nav-button" href="#">home</a>
-      </div>
-      <div class="offcanvas-button">
-        <a class="nav-button" href="#skills-line">skills</a>
-      </div>
-      <div class="offcanvas-button">
-        <a class="nav-button" href="#work-line">work</a>
-      </div>
-      <div class="offcanvas-button">
-        <a class="nav-button" data-bs-toggle="modal" data-bs-target="#contactModal">summon me</a>
-      </div>
-    </div>
-  </div>
 
-  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-body">
-          <div class="inside-grave">
-            <h1 class="modal-title gothic text-white" id="contactModalLabel">SUMMON ME</h1>
-            <p class="gothic text-white">Desires whispered to the <button class="btn bird" data-bs-toggle="popover"
-                data-bs-placement="top" data-bs-custom-class="custom-popover" title="Twitter"
-                data-bs-content="@pedrofsilveira">bird</button>, or within <button class="btn mail"
-                data-bs-toggle="popover" data-bs-placement="bottom" data-bs-custom-class="custom-popover" title="E-MAIL"
-                data-bs-content="pedrofsilveira24@gmail.com">Eldritch Mail's</button> depths, summon my
-              rise. A tribute for your
-              darkest longings.</p>
-            <img src="img/cross.png" alt="cross">
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+      <div class="offcanvas-header">
+        <h1 class="offcanvas-title" id="offcanvasTopLabel">SECTIONS</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="offcanvas-button">
+          <a class="nav-button" href="#">home</a>
+        </div>
+        <div class="offcanvas-button">
+          <a class="nav-button" href="#skills-line">skills</a>
+        </div>
+        <div class="offcanvas-button">
+          <a class="nav-button" href="#work-line">work</a>
+        </div>
+        <div class="offcanvas-button">
+          <a class="nav-button" href="#about-line">about</a>
+        </div>
+        <div class="offcanvas-button">
+          <a class="nav-button" data-bs-toggle="modal" data-bs-target="#contactModal">summon me</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="offcanvas offcanvas-top work-offcanvas" tabindex="-1" id="wikiposa-page"
+      aria-labelledby="wikiposa-page">
+      <div class="offcanvas-header page-header">
+        <h5 class="page-title" id="wikiposa-page-title">CURSE OF THE EARBEINGS</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body page">
+        <div class="diary-content">
+          <p>Beware the cursed website, Wikiposa, a realm ensnared by eerie big-eared creatures. Within its unhallowed
+            depths, I
+            became entangled in a wicked spell, driven to uncover the forbidden secrets of these twisted beings. My
+            crew,
+            tragically
+            corrupted, fell victim to their claws. Yet, we documented our harrowing journey on this unholy website.
+            Prepare yourself
+            for a macabre compendium of foxen lore, tainted by darkness. Explore cautiously, for once under its spell,
+            escape is but
+            an illusion.</p><br>
+          <a href="http://wikiposa.com">
+            <p class="text-danger-emphasis">DO NOT ENTER, DON'T LISTEN TO THEM.</p>
+          </a>
+        </div>
+        <div class="carousel-div">
+
+          <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/wikiposa-dark.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/wikiposa.com_veloz.php.png" class="d-block w-100" alt="screenshot of a species page"> 
+              </div>
+              <div class="carousel-item">
+                <img src="img/wikiposa.com_sobre.php.png" class="d-block w-100" alt="screenshot of the about page">
+              </div>
+              <div class="carousel-item">
+                <img src="img/wikiposa.com_formulario.php.png" class="d-block w-100" alt="screenshot of the form page">
+              </div>
+              <div class="carousel-item">
+                <img src="img/wikiposa.com_galeria.php.png" class="d-block w-100" alt="screenshot of the gallery page">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
         </div>
       </div>
     </div>
-  </div>
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="inside-grave">
+              <h1 class="modal-title gothic text-white" id="contactModalLabel">SUMMON ME</h1>
+              <p class="gothic text-white">Desires whispered to the <button class="btn bird" data-bs-toggle="popover"
+                  data-bs-placement="top" data-bs-custom-class="custom-popover" title="Twitter"
+                  data-bs-content="@pedrofsilveira">bird</button>, or within <button class="btn mail"
+                  data-bs-toggle="popover" data-bs-placement="bottom" data-bs-custom-class="custom-popover"
+                  title="E-MAIL" data-bs-content="pedrofsilveira24@gmail.com">Eldritch Mail's</button> depths, summon
+                my
+                rise. A tribute for your
+                darkest longings.</p>
+              <img src="img/cross.png" alt="cross">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 
